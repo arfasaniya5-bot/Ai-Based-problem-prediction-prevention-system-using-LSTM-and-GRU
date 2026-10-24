@@ -1,0 +1,200 @@
+{
+  "timestamp": "2026-10-24T10:39:32.530379",
+  "target_definition": "T=3 consecutive calendar days, H=2 days advance warning horizon",
+  "partition_info": {
+    "train_fails": 20,
+    "val_fails": 7,
+    "test_fails": 7
+  },
+  "models": {
+    "heuristic": {
+      "name": "Heuristic Threshold (SMART 5/187/197 > 0)",
+      "window_level": {
+        "precision": 0.005445544554455445,
+        "recall": 0.8461538461538461,
+        "pr_auc": 0.0046077684691546075,
+        "confusion_matrix": [
+          [
+            101504,
+            2009
+          ],
+          [
+            2,
+            11
+          ]
+        ]
+      },
+      "drive_level": {
+        "alert_aggregation_rule": "At least one test window triggers alert",
+        "eligible_failed_drives_total": 7,
+        "detected_failed_drives": 6,
+        "drive_recall": 0.8571428571428571,
+        "detected_serials": [
+          "MJ1311YNG3AUYA",
+          "W30068RN",
+          "W300H36V",
+          "Z300WGAW",
+          "Z302FZTY",
+          "Z304JD7V"
+        ],
+        "missed_serials": [
+          "PL2331LAGUJLMJ"
+        ],
+        "lead_times_days": {
+          "MJ1311YNG3AUYA": 4,
+          "W30068RN": 3,
+          "W300H36V": 5,
+          "Z300WGAW": 3,
+          "Z302FZTY": 9,
+          "Z304JD7V": 1
+        },
+        "healthy_drives_evaluated": 11523,
+        "flagged_healthy_drives": 226,
+        "false_alert_rate": 0.01961294801700946,
+        "false_alert_burden_per_1000": 19.61294801700946
+      }
+    },
+    "logistic_regression": {
+      "name": "Logistic Regression Baseline (Summary Features)",
+      "window_level": {
+        "precision": 0.0006312334301224593,
+        "recall": 0.7692307692307693,
+        "pr_auc": 0.0607122651652134,
+        "roc_auc": 0.8252757550333701,
+        "confusion_matrix": [
+          [
+            87681,
+            15832
+          ],
+          [
+            3,
+            10
+          ]
+        ],
+        "train_time_sec": 0.06442809104919434
+      },
+      "drive_level": {
+        "alert_aggregation_rule": "At least one test window has probability >= 0.5",
+        "eligible_failed_drives_total": 7,
+        "detected_failed_drives": 5,
+        "drive_recall": 0.7142857142857143,
+        "detected_serials": [
+          "MJ1311YNG3AUYA",
+          "W30068RN",
+          "W300H36V",
+          "Z300WGAW",
+          "Z302FZTY"
+        ],
+        "missed_serials": [
+          "PL2331LAGUJLMJ",
+          "Z304JD7V"
+        ],
+        "lead_times_days": {
+          "MJ1311YNG3AUYA": 4,
+          "W30068RN": 3,
+          "W300H36V": 5,
+          "Z300WGAW": 3,
+          "Z302FZTY": 9
+        },
+        "healthy_drives_evaluated": 11523,
+        "flagged_healthy_drives": 3629,
+        "false_alert_rate": 0.3149353466979085,
+        "false_alert_burden_per_1000": 314.9353466979085
+      }
+    },
+    "lstm": {
+      "name": "LSTM Neural Network",
+      "window_level": {
+        "precision": 0.03292181069958848,
+        "recall": 0.6153846153846154,
+        "pr_auc": 0.33692650832194976,
+        "roc_auc": 0.9260620553791461,
+        "confusion_matrix": [
+          [
+            103278,
+            235
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "train_time_sec": 6.6370508670806885
+      },
+      "drive_level": {
+        "alert_aggregation_rule": "At least one test window has probability >= 0.5",
+        "eligible_failed_drives_total": 7,
+        "detected_failed_drives": 4,
+        "drive_recall": 0.5714285714285714,
+        "detected_serials": [
+          "W30068RN",
+          "W300H36V",
+          "Z300WGAW",
+          "Z302FZTY"
+        ],
+        "missed_serials": [
+          "MJ1311YNG3AUYA",
+          "PL2331LAGUJLMJ",
+          "Z304JD7V"
+        ],
+        "lead_times_days": {
+          "W30068RN": 3,
+          "W300H36V": 5,
+          "Z300WGAW": 3,
+          "Z302FZTY": 9
+        },
+        "healthy_drives_evaluated": 11523,
+        "flagged_healthy_drives": 27,
+        "false_alert_rate": 0.002343140084960514,
+        "false_alert_burden_per_1000": 2.343140084960514
+      }
+    },
+    "gru": {
+      "name": "GRU Neural Network",
+      "window_level": {
+        "precision": 0.027210884353741496,
+        "recall": 0.6153846153846154,
+        "pr_auc": 0.163207544256776,
+        "roc_auc": 0.9209203749213217,
+        "confusion_matrix": [
+          [
+            103227,
+            286
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "train_time_sec": 10.233826398849487
+      },
+      "drive_level": {
+        "alert_aggregation_rule": "At least one test window has probability >= 0.5",
+        "eligible_failed_drives_total": 7,
+        "detected_failed_drives": 4,
+        "drive_recall": 0.5714285714285714,
+        "detected_serials": [
+          "W30068RN",
+          "W300H36V",
+          "Z300WGAW",
+          "Z302FZTY"
+        ],
+        "missed_serials": [
+          "MJ1311YNG3AUYA",
+          "PL2331LAGUJLMJ",
+          "Z304JD7V"
+        ],
+        "lead_times_days": {
+          "W30068RN": 3,
+          "W300H36V": 5,
+          "Z300WGAW": 3,
+          "Z302FZTY": 9
+        },
+        "healthy_drives_evaluated": 11523,
+        "flagged_healthy_drives": 34,
+        "false_alert_rate": 0.0029506204981341666,
+        "false_alert_burden_per_1000": 2.9506204981341666
+      }
+    }
+  }
+}

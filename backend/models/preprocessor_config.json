@@ -1,0 +1,60 @@
+{
+  "random_seed": 42,
+  "seq_len": 3,
+  "horizon_days": 2,
+  "feature_names": [
+    "smart_1_raw",
+    "smart_4_raw",
+    "smart_5_raw",
+    "smart_7_raw",
+    "smart_9_raw",
+    "smart_12_raw",
+    "smart_187_raw",
+    "smart_188_raw",
+    "smart_194_raw",
+    "smart_197_raw",
+    "smart_198_raw"
+  ],
+  "imputer_strategy": "median",
+  "scaler": "RobustScaler",
+  "downsample_ratio_train": 25,
+  "imputer_medians": {
+    "smart_1_raw": 24240704.0,
+    "smart_4_raw": 8.0,
+    "smart_5_raw": 0.0,
+    "smart_7_raw": 0.0,
+    "smart_9_raw": 13104.0,
+    "smart_12_raw": 7.0,
+    "smart_187_raw": 0.0,
+    "smart_188_raw": 0.0,
+    "smart_194_raw": 27.0,
+    "smart_197_raw": 0.0,
+    "smart_198_raw": 0.0
+  },
+  "scaler_center": {
+    "smart_1_raw": 24240704.0,
+    "smart_4_raw": 8.0,
+    "smart_5_raw": 0.0,
+    "smart_7_raw": 0.0,
+    "smart_9_raw": 13104.0,
+    "smart_12_raw": 7.0,
+    "smart_187_raw": 0.0,
+    "smart_188_raw": 0.0,
+    "smart_194_raw": 27.0,
+    "smart_197_raw": 0.0,
+    "smart_198_raw": 0.0
+  },
+  "scaler_scale": {
+    "smart_1_raw": 126747800.0,
+    "smart_4_raw": 12.0,
+    "smart_5_raw": 1.0,
+    "smart_7_raw": 1.0,
+    "smart_9_raw": 15812.0,
+    "smart_12_raw": 11.0,
+    "smart_187_raw": 1.0,
+    "smart_188_raw": 1.0,
+    "smart_194_raw": 6.0,
+    "smart_197_raw": 1.0,
+    "smart_198_raw": 1.0
+  }
+}
